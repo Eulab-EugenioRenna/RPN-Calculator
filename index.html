@@ -1,0 +1,69 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatrice Polacca</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+</head>
+
+<body>
+
+    <!-- navbar con dark mode -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <a class="navbar-brand" href="#">Calcolatrice Polacca</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link " onclick="toggleDarkMode()">Dark Mode</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- container principale -->
+    <div class="container-fluid mt-5 pt-3">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 col-lg-6">
+                <div id="calc-container" class="card shadow-sm mb-4 p-2 animated fadeInUp">
+                    <textarea id="expression" class="form-control form-control-lg h-auto py-3"
+                        placeholder="Scrivi l'espressione..." rows="10"></textarea>
+                    <button id="eval-btn" class="btn btn-primary btn-block mt-2" onclick="esegui()">Esegui</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 col-lg-6">
+                <div id="result-container" class="card shadow-sm mb-4 p-2 animated fadeInUp">
+                    <p>Risultato: <span id="result">0</span></p>
+
+                    <p>Step: <span id="steps">0</span></p>
+
+                    <p>Espressione Normale: <span id="normal-expression">0</span></p>
+                    <p id="error-message" class="text-danger"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- librerie js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="calcolatricePolacca.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
